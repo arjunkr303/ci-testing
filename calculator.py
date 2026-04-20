@@ -4,7 +4,7 @@ def calculate_tip(bill: float, tip_percent: float, people: int = 1) -> dict:
     if people < 1:
         raise ValueError("At least one person required")
 
-    tip_total = round(bill * (tip_percent / 100), 2)
+    tip_total = round(bill * (tip_percent / 100))
     total = round(bill + tip_total, 2)
     per_person = round(total / people, 2)
 
